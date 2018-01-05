@@ -1,11 +1,11 @@
 
 exports.up = function(knex, Promise)  {
   return knex.schema.createTable('notes', function(table){
-    table.increments('id').unsigned().primary();
-    table.string('title').notNull();
-    table.string('journal');
-    table.string('author');
-    table.timestamps();
+    table.increments();
+    table.text('title');
+    table.text('journal');
+    table.text('author');
+    table.timestamp('created_at').notNullable().defaultTo(knex.raw('now()'));
 
   });
 };
