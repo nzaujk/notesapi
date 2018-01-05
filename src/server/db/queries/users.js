@@ -8,7 +8,7 @@ function addUser(user) {
     .insert({
       username: user.username,
       email: user.email,
-      password: user.password
+      password: user.hash
     })
     .returning('*');
 }
