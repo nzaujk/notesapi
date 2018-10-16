@@ -1,11 +1,11 @@
 // queries associated with the notes resource
 const knex = require('../connection');
 
-function getAllNotes() {
+const getAllNotes =  () => {
   return knex('notes')
     .select('*');
-}
-function getNote(id) {
+};
+const getNote = (id) => {
   return knex('notes')
     .select('*')
     .where({ id: parseInt(id) });

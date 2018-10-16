@@ -5,7 +5,7 @@ const BASE_PATH = path.join(__dirname, 'src', 'server', 'db');
 module.exports = {
   test: {
     client: 'pg',
-    connection: 'postgres://@localhost:5433/notes_test',
+    connection: 'postgres://@localhost:5432/notes_test',
     migrations: {
       directory: path.join(BASE_PATH, 'migrations')
     },
@@ -15,7 +15,7 @@ module.exports = {
   },
   development: {
     client: 'pg',
-    connection: 'postgres://@localhost:5433/notes',
+    connection: 'postgres://@localhost:5432/notes',
     migrations: {
       directory: path.join(BASE_PATH, 'migrations')
     },
