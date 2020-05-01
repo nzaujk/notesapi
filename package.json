@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./src/server/index.js",
-    "test": "./node_modules/mocha/bin/_mocha"
+    "test": "./node_modules/mocha/bin/_mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Joe Nzau",
   "license": "ISC",
@@ -23,12 +25,14 @@
     "koa-session": "^5.5.1",
     "nodemon": "^1.14.7",
     "passport-local": "^1.0.0",
-    "pg": "^7.1.2"
+    "pg": "^7.1.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "chai-http": "^3.0.0",
     "eslint": "^4.14.0",
     "mocha": "^3.5.0"
-  }
+  },
+  "snyk": true
 }
